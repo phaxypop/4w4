@@ -71,9 +71,14 @@ body {
 .global > section,
 .global > header,
 .global > footer {
-  flex: 0 1 900px;
+  flex: 0 1 1100px;
   padding: 3rem 1rem;
   background-color: rgba(255, 255, 255, var(--transparence-section));
+}
+
+.global > header {
+  flex: 1;
+  min-height: auto;
 }
 
 #entete, #footer {
@@ -106,6 +111,32 @@ body {
 #footer {
   background-color: var(--couleur-arriere-footer);
   color: var(--couleur-footer);
+}
+
+.entete__header {
+  background-image: url("../images/wordpress-theme.png");
+  background-repeat: no-repeat;
+  background-position: 95% 45%;
+}
+
+a.bouton, .bouton1 {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  word-spacing: 3px;
+  background-color: blue;
+}
+
+.bouton1 {
+  background-color: red;
 }
 
 /*

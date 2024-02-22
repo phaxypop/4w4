@@ -17,11 +17,15 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 
 @import "layout";
 
+@import "entete";
+
+@import "bouton";
+
 @import "base/h";
 
 @import "effets/vague";
 
-@import "diagonal";
+@import "effets/diagonal";
 
 @import "bouton";
 
