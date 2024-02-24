@@ -113,6 +113,12 @@ p {
   font-size: 1.5rem;
 }
 
+p::first-letter {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 200%;
+  color: red;
+}
+
 #evenement {
   background-color: var(--couleur-arriere-accueil);
   color: var(--couleur-evenement);
@@ -130,6 +136,37 @@ p {
   color: var(--couleur-footer);
 }
 
+#footer a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: lightblue;
+  text-decoration: none;
+}
+
+#footer a:visited {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: lightblue;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 550px) {
+  .entete {
+    margin: 0 auto;
+  }
+  .p-bkg {
+    background-color: lightblue;
+    box-shadow: 2px 2px 2px black;
+    width: 25rem;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 25px auto;
+  }
+  p {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+  }
+}
 .entete__header {
   background-image: url("../images/wordpress-theme.png");
   background-repeat: no-repeat;
@@ -162,31 +199,20 @@ h1 {
   font-style: normal;
 }
 
-#accueil h2 {
-  font-size: clamp(1rem, -1.292rem + 7.333vw, 3.75rem);
-  font-weight: 500;
-  color: rgba(163, 11, 11, 0.8);
-  font-style: normal;
-}
-
-#evenement h2 {
-  font-size: clamp(1rem, -1.292rem + 6.333vw, 3.75rem);
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: rgba(0, 255, 255, 0.3);
-}
-
-#galerie h2 {
-  font-size: clamp(0.5rem, -1.5rem + 5vw, 4.75rem);
+h2 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: rgba(21, 255, 0, 0.164);
+  font-size: 2.5rem;
 }
 
-#footer h2 {
-  font-size: clamp(2rem, -2.292rem + 8.333vw, 3.75rem);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgba(255, 0, 179, 0.3);
+i {
+  color: chocolate;
 }
 
+@media screen and (max-width: 550px) {
+  h2 {
+    font-size: 1rem;
+  }
+}
 .vague {
   position: absolute;
   bottom: 0;
