@@ -29,6 +29,6 @@ A réaliser :
 - Ajouter de nouveaux éléments HTML
 - Une github-page
 
-### Ma github-page (la votre)
+### Ma github-page
 
-- https://eddytuto.github.io/4w4-2024-gr2/
+- https://phaxypop.github.io/4w4/
