@@ -1,5 +1,14 @@
-.entete__header{
+.entete__header {
+  background-image: url("../images/wordpress-theme.png");
+  background-repeat: no-repeat;
+  background-position: 95% 45%;
+}
+
+@media screen and (min-width: 550px) {
+  .entete__header {
     background-image: url("../images/wordpress-theme.png");
     background-repeat: no-repeat;
     background-position: 95% 45%;
+    margin: 0 auto;
+  }
 }

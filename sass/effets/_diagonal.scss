@@ -1,16 +1,16 @@
-.diagonal{
-    position: relative;
-    isolation: isolate;
+.diagonal {
+  position: relative;
+  isolation: isolate;
 }
-.diagonal::after{
-    position: absolute;
-    content: "";
-    // left: 0;
-    // right: 0;
-    // top: 0;
-    // bottom: 0;
-    inset: 0;
-    background-color: brown;
-    transform: skewY(-5deg);
-    z-index: -1;
+.diagonal::after {
+  position: absolute;
+  content: "";
+  // left: 0;
+  // right: 0;
+  // top: 0;
+  // bottom: 0;
+  inset: 0;
+  background-color: rgb(248, 236, 73);
+  transform: skewY(-5deg);
+  z-index: -1;
 }

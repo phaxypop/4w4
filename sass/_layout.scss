@@ -1,58 +1,71 @@
 * {
-    margin : 0;
-    padding:0;
+  margin: 0;
+  padding: 0;
 }
 
-body{
- display : flex;
- flex-direction : column;
- font-family: "prompt", sans-serif;
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "prompt", sans-serif;
 }
 
 .global {
-    display : flex;
-    justify-content: center;
-    min-height : 40vh;
+  display: flex;
+  justify-content: center;
+  min-height: 40vh;
 }
 
 .global > section,
 .global > header,
 .global > footer {
-    flex : 0 1 1100px;
-    //border : 1px solid #aaa;
-    padding: 3rem 1rem;
-    // background-color: rgba(0,0,0,.1);
-    background-color: rgba(255,255,255,var(--transparence-section));
+  flex: 0 1 1100px;
+  //border : 1px solid #aaa;
+  padding: 3rem 1rem;
+  // background-color: rgba(0,0,0,.1);
+  background-color: rgba(255, 255, 255, var(--transparence-section));
 }
 .global > header {
-    flex: 1;
-    min-height: auto;
+  flex: 1;
+  min-height: auto;
 }
-#entete, #footer {
-    min-height: 20vh;
+#entete,
+#footer {
+  min-height: 20vh;
 }
-#entete{
-    background-color: var(--couleur-arriere-entete);
-    color : var(--couleur-entete);
-    position : relative;
-
-
+#entete {
+  background-color: var(--couleur-arriere-entete);
+  color: var(--couleur-entete);
+  position: relative;
 }
-#accueil{
-    background-color: var(--couleur-arriere-accueil);
-    color : var(--couleur-accueil);
+#accueil {
+  background-color: var(--couleur-arriere-accueil);
+  color: var(--couleur-accueil);
 }
-#evenement{
-    background-color: var(--couleur-arriere-accueil);
-    color : var(--couleur-evenement);
-    z-index: 1;
+.p-bkg {
+  background-color: lightblue;
+  box-shadow: 2px 2px 2px black;
+  width: 50rem;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 50px auto;
 }
-#galerie{
-    background-color: var(--couleur-arriere-galerie);
-    color : var(--couleur-galerie);
-    position : relative;
+p {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
 }
-#footer{
-    background-color: var(--couleur-arriere-footer);
-    color : var(--couleur-footer);
+#evenement {
+  background-color: var(--couleur-arriere-accueil);
+  color: var(--couleur-evenement);
+  z-index: 1;
+}
+#galerie {
+  background-color: var(--couleur-arriere-galerie);
+  color: var(--couleur-galerie);
+  position: relative;
+}
+#footer {
+  background-color: var(--couleur-arriere-footer);
+  color: var(--couleur-footer);
 }

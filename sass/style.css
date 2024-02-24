@@ -81,7 +81,8 @@ body {
   min-height: auto;
 }
 
-#entete, #footer {
+#entete,
+#footer {
   min-height: 20vh;
 }
 
@@ -94,6 +95,22 @@ body {
 #accueil {
   background-color: var(--couleur-arriere-accueil);
   color: var(--couleur-accueil);
+}
+
+.p-bkg {
+  background-color: lightblue;
+  box-shadow: 2px 2px 2px black;
+  width: 50rem;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 50px auto;
+}
+
+p {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
 }
 
 #evenement {
@@ -119,6 +136,14 @@ body {
   background-position: 95% 45%;
 }
 
+@media screen and (min-width: 550px) {
+  .entete__header {
+    background-image: url("../images/wordpress-theme.png");
+    background-repeat: no-repeat;
+    background-position: 95% 45%;
+    margin: 0 auto;
+  }
+}
 button {
   position: relative;
   font-size: 1.125rem;
@@ -192,7 +217,7 @@ h1 {
   position: absolute;
   content: "";
   inset: 0;
-  background-color: brown;
+  background-color: rgb(248, 236, 73);
   transform: skewY(-5deg);
   z-index: -1;
 }
