@@ -194,7 +194,12 @@ button {
   position: relative;
   font-size: 1.125rem;
   padding: 14px 23px;
-  background-image: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(12, 110, 133) 40%, rgb(0, 212, 255) 100%);
+  background-image: linear-gradient(
+    90deg,
+    rgb(2, 0, 36) 0%,
+    rgb(12, 110, 133) 40%,
+    rgb(0, 212, 255) 100%
+  );
   z-index: 2;
 }
 
@@ -276,4 +281,4 @@ i {
   justify-content: space-around;
   flex: 1 0 20%;
   border: 2px solid lightblue;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

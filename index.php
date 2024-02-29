@@ -36,9 +36,15 @@
         <?php
           if(have_posts()):
             while(have_posts()) : the_post();
+            $titre = get_the_title();
+            $sigle = substr($titre,0,7);
+            $duree = get_the_title(number_format(25))
+            //$titre
         ?>
         <div class="carte">
-          <h3><?php the_title() ?></h3>
+          <p><?php echo $sigle  ?></p>
+          <h3><?php echo $titre ?></h3>
+          <p><?php echo $duree ?></p>
           <p> <?php echo wp_trim_words(get_the_content(),20) ?></p>
         </div>
         <?php endwhile;?>
@@ -86,7 +92,7 @@
       </section>
     </div>
     <div id="footer" class="global">
-      <div class="vague">
+      <!-- <div class="vague">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +104,7 @@
             style="fill: var(--couleur-arriere-footer)"
           ></path>
         </svg>
-      </div>
+      </div> -->
       <section>
         <h2>Footer</h2>
         <h3>Liens (h3)</h3>
