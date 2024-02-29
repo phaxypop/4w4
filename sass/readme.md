@@ -1,34 +1,31 @@
-# Exercice #1
+# Labo #3
 
-## Syphax Mokraoui
+## Création d'un site WP.
 
-## Reproduire et améliorer la maquette exemple présenté au cours
+- Adaptation du thème de exercice #1
+- Création du modèle index.php
+- Création de la branche labo3
+- minimum 3 commits
+- Un Readme.md qui contiendra:
+  - Le nom de l'auteur
+  - L'objectif du labo3
+  - Les réalisations
+  - Un lien vers la github-page
+- Décomposé le titre de chaque cours:
 
-### Continuer la version du Laboratoire #2
+  - sigle du cours ex: 582-4W4
+  - le titre du cours ex: Conception d'interface et développement Web
+  - la durée du cours : 90h
 
-- Amélioration du dossier Sass
-- Ajout dans style.scss des nouveaux fichiers .scss
-- Utilisations de différentes techniques pour élaborer une palette de couleur
-  - monochrome (une seule teinte et on fait varier la saturation et la luminosité
-  - complémentaire (deux teintes à 180deg )
-  - triade (trois teinte =/- 120%)
-- Utilisation de la règle 60-30-10
-- Améliorer l'entête en ajoutant une image en background qui s'enligne horizontalement avec les titres de l'entête
-- Création d'un bouton utilisant les variables, la propriété background-image, linear-gradient. le bouton réagit aux événements :hover et :active
-- Création de lien réagissant aux événements :hover : visited :focus
-- Amélioration générale de la pagination
-- Ajout de nouveaux éléments HTML
+- Garder les 30 premiers mots de la description du cours.
 
-A réaliser :
+### La section galerie affichera la liste des cours du TIM en 4 colonnes.
 
-- Améliorer l'entête
-- Ajouter une image
-- Ajouter un bouton
-- Ajouter des liens
-- Améliorer pagination
-- Ajouter de nouveaux éléments HTML
-- Une github-page
+- La liste devra s'adapter aux différentes largeurs de fenêtre.
+- Chacune des cartes de cours sera formatés en en utilisant les flex box
 
-### Ma github-page
+### Barème de correction
 
-- https://phaxypop.github.io/4w4/
+- Organistion du code, 3 commits minimum (point)
+- Résultat sous forme de github page (.5 point)
+- Design global de la page (.5 point)
