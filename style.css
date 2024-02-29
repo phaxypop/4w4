@@ -261,19 +261,4 @@ i {
   background-color: aqua;
   width: 6000px;
   height: 200px;
-}
-
-.cours {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 1rem;
-}
-
-.carte {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  flex: 1 0 20%;
-  border: 2px solid lightblue;
 }/*# sourceMappingURL=style.css.map */
