@@ -32,24 +32,20 @@
     <div id="accueil" class="global">
       <section>
         <h2>Accueil (h2)</h2>
-       <div class="cours">
-        <?php
-          if(have_posts()):
-            while(have_posts()) : the_post();
-            $titre = get_the_title();
-            $sigle = substr($titre,0,7);
-            $duree = get_the_title(number_format(25))
-            //$titre
-        ?>
-        <div class="carte">
-          <p><?php echo $sigle  ?></p>
-          <h3><?php echo $titre ?></h3>
-          <p><?php echo $duree ?></p>
-          <p> <?php echo wp_trim_words(get_the_content(),20) ?></p>
-        </div>
-        <?php endwhile;?>
-        <?php endif; ?>
-       </div>
+          <p>
+          Événement lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Delectus itaque culpa facere deleniti laboriosam rerum, debitis sunt,
+          nostrum, exercitationem ipsum deserunt <i>enim libero</i> laborum
+          aspernatur perspiciatis est natus qui ipsa.
+        </p>
+
+        <div class="p-bkg">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Voluptatibus laboriosam alias fugit magnam, aspernatur ut dolore!
+            Quia similique totam maxime. <i>Ipsum cum optio</i> reprehenderit
+            odit at praesentium nemo incidunt veritatis.
+          </p>
       </section>
     </div>
     <div id="evenement" class="global">
@@ -75,20 +71,24 @@
     <div id="galerie" class="global diagonal">
       <section>
         <h2>Galerie</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-          itaque culpa facere deleniti <i>laboriosam</i> rerum, debitis sunt,
-          nostrum, exercitationem ipsum deserunt enim libero laborum aspernatur
-          perspiciatis est natus qui ipsa.
-        </p>
-        <div class="p-bkg">
-          <p>
-            Galerie lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus laboriosam alias <i>fugit magnam</i>, aspernatur ut
-            dolore! Quia similique totam maxime. Ipsum cum optio reprehenderit
-            odit at praesentium nemo incidunt veritatis.
-          </p>
+         <div class="cours">
+        <?php
+          if(have_posts()):
+            while(have_posts()) : the_post();
+            $titre = get_the_title();
+            $sigle = substr($titre,0,7);
+            $duree = substr($titre, -6);
+            $titre = substr($titre, 8, -6);
+        ?>
+        <div class="carte">
+          <p><?php echo $sigle  ?></p>
+          <h3><?php echo $titre ?></h3>
+          <p><?php echo $duree ?></p>
+          <p> <?php echo wp_trim_words(get_the_content(),30) ?></p>
         </div>
+        <?php endwhile;?>
+        <?php endif; ?>
+       </div>
       </section>
     </div>
     <div id="footer" class="global">
