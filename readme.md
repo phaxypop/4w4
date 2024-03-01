@@ -6,11 +6,10 @@
 - Création du modèle index.php
 - Création de la branche labo3
 - minimum 3 commits
-- Un Readme.md qui contiendra:
-  - Le nom de l'auteur
-  - L'objectif du labo3
-  - Les réalisations
-  - Un lien vers la github-page
+
+  - Syphax Mokraoui
+  - Ajout dynamiques avec PHP
+  - https://phaxypop.github.io/4w4/
 - Décomposé le titre de chaque cours:
 
   - sigle du cours ex: 582-4W4
@@ -29,7 +28,3 @@
 - Organistion du code, 3 commits minimum (point)
 - Résultat sous forme de github page (.5 point)
 - Design global de la page (.5 point)
-
-## Lien Github Page :
-
-- https://phaxypop.github.io/4w4/
