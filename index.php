@@ -20,6 +20,11 @@
     />
   </head>
   <body>
+    <nav id="menu" class="global">
+      <header class="menu__header">
+        <?php wp_nav_menu(array("container" => "nav" )); ?>
+        <header>  
+    <nav>
     <div id="entete" class="global">
       <header class="entete__header">
         <h1>Thème Syphax</h1>
