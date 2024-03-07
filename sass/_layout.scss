@@ -14,12 +14,13 @@ body {
   justify-content: center;
   min-height: 40vh;
 }
-.global > .entete__header{
+.global > .entete__header {
   flex: 1;
 }
 
-#menu {
-  
+#menu__entete {
+  position: relative;
+  background-color: var(--couleur-arriere-menu);
 }
 
 .global > section,
@@ -87,7 +88,7 @@ p {
   color: lightblue;
   text-decoration: none;
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 700px) {
   .entete__header {
     display: flex;
     flex-direction: column;

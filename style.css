@@ -13,22 +13,9 @@ Text Domain: theme-syphax
 https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 */
 :root {
-  /*
-    --couleur-arriere-entete: #3ca5ff;
-    --couleur-arriere-accueil: #add70c;
-    --couleur-arriere-evenement: #32994f;
-    --couleur-arriere-galerie: rgb(230 139 42);
-    --couleur-arriere-footer: #6d5b48;
-
-    // Niveau de transparence des h
-    --transparence-h1 : .4;
-    // Transparence section
-    --transparence-section : .1;
-
-    */
   /* Calcul des teintes) */
-  --u1: 210;
-  --u2: calc(var(--u1) + 80);
+  --u1: 220;
+  --u2: calc(var(--u1) + 180);
   --u3: calc(var(--u2) - 30);
   --u4: calc(var(--u2) + 30);
   /* La saturation */
@@ -37,22 +24,34 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   /* la luminosité */
   --l-arriere: 30%;
   --l-avant: 20%;
-  /* couleur arrière plan - background-color */
-  --couleur-arriere-entete: hsl(var(--u1), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-accueil: hsl(var(--u2), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-evenement: hsl(
-    var(--u3),
-    var(--s-arriere),
-    var(--l-arriere)
-  );
-  --couleur-arriere-galerie: hsl(var(--u4), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-footer: hsl(var(--u1), var(--s-arriere), var(--l-arriere));
   /* couleur avant plan  - color  */
   --couleur-entete: hsl(var(--u1), var(--s-avant), var(--l-avant));
   --couleur-accueil: hsl(var(--u2), var(--s-avant), var(--l-avant));
   --couleur-evenement: hsl(var(--u3), var(--s-avant), var(--l-avant));
   --couleur-galerie: hsl(var(--u4), var(--s-avant), var(--l-avant));
   --couleur-footer: hsl(var(--u1), var(--s-avant), var(--l-avant));
+  /* Couleur monochrome */
+  /* couleur arrière plan - background-color */
+  --couleur-arriere-menu: hsl(var(--u1), 100%, 70%, 30%);
+  --couleur-arriere-entete: hsl(var(--u1), 100%, 70%);
+  --couleur-arriere-accueil: hsl(var(--u1), 110%, 75%);
+  --couleur-arriere-footer: hsl(var(--u1), 100%, 70%);
+  --couleur-arriere-evenement: var(--couleur-arriere-accueil);
+  --couleur-arriere-galerie: var(--couleur-arriere-accueil);
+  --couleur-entete: hsl(var(--u1), 100%, 30%);
+  --couleur-accueil: hsl(var(--u1), 100%, 25%);
+  --couleur-evenement: hsl(var(--u1), 100%, 20%);
+  --couleur-galerie: hsl(var(--u1), 100%, 15%);
+  --couleur-footer: hsl(var(--u1), 100%, 15%);
+  --couleur-arriere-diagonal: hsl(var(--u2), 100%, 80%);
+}
+
+.carte {
+  --_couleur-arriere: hsl(var(--u1), 100%, 85%);
+}
+
+#footer {
+  --_couleur-arriere-vague: var(--couleur-arriere-evenement);
 }
 
 * {
@@ -70,6 +69,15 @@ body {
   display: flex;
   justify-content: center;
   min-height: 40vh;
+}
+
+.global > .entete__header {
+  flex: 1;
+}
+
+#menu__entete {
+  position: relative;
+  background-color: var(--couleur-arriere-menu);
 }
 
 .global > section,
@@ -146,7 +154,7 @@ p {
   text-decoration: none;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 700px) {
   .entete__header {
     display: flex;
     flex-direction: column;
@@ -188,12 +196,7 @@ button {
   position: relative;
   font-size: 1.125rem;
   padding: 14px 23px;
-  background-image: linear-gradient(
-    90deg,
-    rgb(2, 0, 36) 0%,
-    rgb(12, 110, 133) 40%,
-    rgb(0, 212, 255) 100%
-  );
+  background-image: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(12, 110, 133) 40%, rgb(0, 212, 255) 100%);
   z-index: 2;
 }
 
@@ -238,8 +241,8 @@ i {
   height: 72px;
 }
 
-.vague .shape-fill {
-  fill: var(--couleur-arriere-accueil);
+.vague .remplissage {
+  fill: var(--_couleur-arriere-vague);
 }
 
 .diagonal {
@@ -272,7 +275,43 @@ i {
 .carte {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  flex: 1 0 20%;
-  border: 2px solid lightblue;
-} /*# sourceMappingURL=style.css.map */
+  justify-content: center;
+  flex: 1 0 225px;
+  border: 1px solid #aaa;
+  background-color: var(--_couleur-arriere);
+  padding: 1rem;
+}
+
+.menu-principal-container {
+  background-color: rgba(0, 0, 0, 0.377);
+}
+
+.menu {
+  display: none;
+}
+@media (min-width: 700px) {
+  .menu {
+    display: flex;
+    list-style-type: none;
+  }
+}
+
+.menu-item {
+  flex: 1 0 50px;
+}
+
+.menu-item a {
+  color: red;
+}
+
+#burger {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+@media (min-width: 700px) {
+  #burger {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
