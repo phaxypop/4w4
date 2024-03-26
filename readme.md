@@ -1,35 +1,24 @@
-# Labo 4
+# TP1 - Club de voyage
 
-### Créer une nouvelle branche « labo4 »
+# Exercice 2 (5 points)
 
-### Création du menu principal
+- Compléter l'utilisation du mapping de couleurs avec boucle et mixin (1 point)
 
-- Ajouter un menu permettant d'accéder
-  - à vos cinq cours préférés
-  - à chacune des sections de la page
-- Le menu doit être formatter en utilisant
-  composant/\_menu.scss
-  Le menu doit être adaptatif et être amovible en version mobile.
+- Amélioration de la page d'accueil (front-page.php) (1 point)
+  - Changer le titre et la description générale du site
+  - Chaque destination contient les catégories associées.
+  - On voit uniquement les destinations « populaire »
+  - Améliorer l'apparence de la liste des catégories
+  - Améliorer l'apparence de chacune des cartes
+- Afficher des cartes de catégories pour l'ensemble des catégories dans la page d'accueil (2 points)
 
-### Création d'un header.php
+  - Titre de la catégorie
+  - 10 premiers mot de la description
+  - Un lien permet d'accéder à la liste des destinations de cette catégorie
+  - Le nombre d'article pour cette catégorie
 
-- Créer le template header.php qui contiendra la structure d'entête de la page qui sera reproduite dans chacun des modules du thème
-
-### Création d'un « template-part » (gabarit)
-
-- Créer un template-part qui permettra d'afficher les vagues.
-
-## Barème de correction
-
-### integration et codification (1 point)
-
-- intégration de chacun des éléments précédents de façon structuré. (1 point)
-
-### Design général de la page et organisation (1 point)
-
-- Création d'une github-page à partir de index.htm
-- Création du readme.md avec:
-  - Syphax Mokraoui
-  - Modification du menu avec scss
-  - https://phaxypop.github.io/4w4/
-- Production de 5 commits
+- Créer un readme (1 point)
+  - Créer une github-page : mettre à jour index.htm
+  - Ajouter l'adresse de la github-page dans votre readme.
+  - Le non de l'auteur
+  - Courte description de votre tp1

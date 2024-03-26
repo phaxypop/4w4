@@ -12,15 +12,6 @@ body {
 .global {
   display: flex;
   justify-content: center;
-  min-height: 40vh;
-}
-.global > .entete__header {
-  flex: 1;
-}
-
-#menu__entete {
-  position: relative;
-  background-color: var(--couleur-arriere-menu);
 }
 
 .global > section,
@@ -32,40 +23,33 @@ body {
   // background-color: rgba(0,0,0,.1);
   background-color: rgba(255, 255, 255, var(--transparence-section));
 }
-.global > header {
+
+.global > .entete__header {
   flex: 1;
-  min-height: auto;
 }
+
 #entete,
 #footer {
   min-height: 20vh;
 }
+
+#menu__entete {
+  position: relative;
+  // background-color: var(--couleur-arriere-menu);
+}
+
 #entete {
   background-color: var(--couleur-arriere-entete);
   color: var(--couleur-entete);
   position: relative;
+  min-height: 100vh;
 }
 #accueil {
   background-color: var(--couleur-arriere-accueil);
   color: var(--couleur-accueil);
 }
-.p-bkg {
-  background-color: lightblue;
-  box-shadow: 2px 2px 2px black;
-  width: 50rem;
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin: 50px auto;
-}
-p {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.5rem;
-}
-
 #evenement {
-  background-color: var(--couleur-arriere-accueil);
+  background-color: var(--couleur-arriere-evenement);
   color: var(--couleur-evenement);
   z-index: 1;
 }
@@ -77,38 +61,4 @@ p {
 #footer {
   background-color: var(--couleur-arriere-footer);
   color: var(--couleur-footer);
-}
-#footer a {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: lightblue;
-  text-decoration: none;
-}
-#footer a:visited {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: lightblue;
-  text-decoration: none;
-}
-@media screen and (max-width: 700px) {
-  .entete__header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .entete__header h1 {
-    font-size: 200%;
-  }
-  .p-bkg {
-    background-color: lightblue;
-    box-shadow: 2px 2px 2px black;
-    width: 25rem;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 25px auto;
-  }
-  p {
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1rem;
-  }
 }
