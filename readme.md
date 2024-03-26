@@ -20,5 +20,5 @@
 - Créer un readme (1 point)
   - Créer une github-page : mettre à jour index.htm
   - Ajouter l'adresse de la github-page dans votre readme.
-  - Le non de l'auteur
+  - Le nom de l'auteur
   - Courte description de votre tp1

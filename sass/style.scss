@@ -36,13 +36,13 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 /* Effet */
 /* //////////////////////////////// */
 
-@import "effet/vague";
+@import "effets/vague";
 
-@import "effet/diagonal";
+@import "effets/diagonal";
 
 /* //////////////////////////////// */
 /* Composants */
 /* //////////////////////////////// */
 
 @import "composant/carte";
-@import "composant/menu";
+@import "composant/menus";

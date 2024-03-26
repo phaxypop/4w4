@@ -12,10 +12,17 @@ Text Domain: theme-syphax
 /*
 https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 */
+/* Initialisation des variables Sass et css */
+/* variable Sass */
+/* palette de couleurs */
+/* A partir des variables de couleurs de la palette choisie
+on un mapping en catégorisant les différentes couleurs,
+Ce map contient un map principal et plusieurs sous-map */
+/* Agencement de couleurs */
 :root {
   /* Calcul des teintes) */
   --u1: 220;
-  --u2: calc(var(--u1) + 180);
+  --u2: calc(var(--u1) - 180);
   --u3: calc(var(--u2) - 30);
   --u4: calc(var(--u2) + 30);
   /* La saturation */
@@ -32,9 +39,9 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   --couleur-footer: hsl(var(--u1), var(--s-avant), var(--l-avant));
   /* Couleur monochrome */
   /* couleur arrière plan - background-color */
-  --couleur-arriere-menu: hsl(var(--u1), 100%, 70%, 30%);
+  --couleur-arriere-menu: hsl(var(--u1), 100%, 30%);
   --couleur-arriere-entete: hsl(var(--u1), 100%, 70%);
-  --couleur-arriere-accueil: hsl(var(--u1), 110%, 75%);
+  --couleur-arriere-accueil: hsl(var(--u1), 100%, 75%);
   --couleur-arriere-footer: hsl(var(--u1), 100%, 70%);
   --couleur-arriere-evenement: var(--couleur-arriere-accueil);
   --couleur-arriere-galerie: var(--couleur-arriere-accueil);
@@ -46,12 +53,168 @@ https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
   --couleur-arriere-diagonal: hsl(var(--u2), 100%, 80%);
 }
 
+/* variable local */
 .carte {
   --_couleur-arriere: hsl(var(--u1), 100%, 85%);
 }
 
-#footer {
-  --_couleur-arriere-vague: var(--couleur-arriere-evenement);
+#entete {
+  --_couleur-arriere-vague: var(--couleur-arriere-accueil);
+}
+
+#galerie {
+  --_couleur-arriere-vague: var(--couleur-arriere-footer);
+}
+
+/* Création des class de couleurs */
+/* Création de classe de couleur */
+.clr-primaire-100 {
+  color: hsl(220, 100%, 85%);
+}
+
+.bck-primaire-100 {
+  background-color: hsl(220, 100%, 85%);
+}
+
+.clr-primaire-200 {
+  color: hsl(220, 100%, 60%);
+}
+
+.bck-primaire-200 {
+  background-color: hsl(220, 100%, 60%);
+}
+
+.clr-primaire-300 {
+  color: hsl(220, 100%, 30%);
+}
+
+.bck-primaire-300 {
+  background-color: hsl(220, 100%, 30%);
+}
+
+.clr-primaire-400 {
+  color: hsl(220, 100%, 15%);
+}
+
+.bck-primaire-400 {
+  background-color: hsl(220, 100%, 15%);
+}
+
+.clr-secondaire-100 {
+  color: hsl(40, 100%, 85%);
+}
+
+.bck-secondaire-100 {
+  background-color: hsl(40, 100%, 85%);
+}
+
+.clr-secondaire-200 {
+  color: hsl(40, 100%, 50%);
+}
+
+.bck-secondaire-200 {
+  background-color: hsl(40, 100%, 50%);
+}
+
+.clr-secondaire-300 {
+  color: hsl(40, 100%, 30%);
+}
+
+.bck-secondaire-300 {
+  background-color: hsl(40, 100%, 30%);
+}
+
+.clr-secondaire-400 {
+  color: hsl(40, 100%, 15%);
+}
+
+.bck-secondaire-400 {
+  background-color: hsl(40, 100%, 15%);
+}
+
+.clr-ternaire-100 {
+  color: hsl(10, 100%, 85%);
+}
+
+.bck-ternaire-100 {
+  background-color: hsl(10, 100%, 85%);
+}
+
+.clr-ternaire-200 {
+  color: hsl(10, 100%, 50%);
+}
+
+.bck-ternaire-200 {
+  background-color: hsl(10, 100%, 50%);
+}
+
+.clr-ternaire-300 {
+  color: hsl(10, 100%, 30%);
+}
+
+.bck-ternaire-300 {
+  background-color: hsl(10, 100%, 30%);
+}
+
+.clr-ternaire-400 {
+  color: hsl(10, 100%, 15%);
+}
+
+.bck-ternaire-400 {
+  background-color: hsl(10, 100%, 15%);
+}
+
+.clr-vert-100 {
+  color: hsl(70, 100%, 85%);
+}
+
+.bck-vert-100 {
+  background-color: hsl(70, 100%, 85%);
+}
+
+.clr-vert-200 {
+  color: hsl(70, 100%, 50%);
+}
+
+.bck-vert-200 {
+  background-color: hsl(70, 100%, 50%);
+}
+
+.clr-vert-300 {
+  color: hsl(70, 100%, 30%);
+}
+
+.bck-vert-300 {
+  background-color: hsl(70, 100%, 30%);
+}
+
+.clr-vert-400 {
+  color: hsl(70, 100%, 15%);
+}
+
+.bck-vert-400 {
+  background-color: hsl(70, 100%, 15%);
+}
+
+/* mixin pour agencer des couleurs */
+.clr-agencement-primaire {
+  color: hsl(220, 100%, 85%);
+  background-image: linear-gradient(90deg, hsl(220, 100%, 15%), hsl(220, 100%, 60%));
+}
+
+.clr-agencement-secondaire {
+  color: hsl(40, 100%, 15%);
+  background-color: hsl(40, 100%, 85%);
+}
+
+.clr-agencement-ternaire {
+  color: hsl(10, 100%, 15%);
+  background-color: hsl(10, 100%, 85%);
+}
+
+.clr-agencement-vert {
+  color: hsl(70, 100%, 15%);
+  background-color: hsl(70, 100%, 85%);
 }
 
 * {
@@ -68,16 +231,6 @@ body {
 .global {
   display: flex;
   justify-content: center;
-  min-height: 40vh;
-}
-
-.global > .entete__header {
-  flex: 1;
-}
-
-#menu__entete {
-  position: relative;
-  background-color: var(--couleur-arriere-menu);
 }
 
 .global > section,
@@ -88,9 +241,8 @@ body {
   background-color: rgba(255, 255, 255, var(--transparence-section));
 }
 
-.global > header {
+.global > .entete__header {
   flex: 1;
-  min-height: auto;
 }
 
 #entete,
@@ -98,10 +250,15 @@ body {
   min-height: 20vh;
 }
 
+#menu__entete {
+  position: relative;
+}
+
 #entete {
   background-color: var(--couleur-arriere-entete);
   color: var(--couleur-entete);
   position: relative;
+  min-height: 100vh;
 }
 
 #accueil {
@@ -109,24 +266,8 @@ body {
   color: var(--couleur-accueil);
 }
 
-.p-bkg {
-  background-color: lightblue;
-  box-shadow: 2px 2px 2px black;
-  width: 50rem;
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin: 50px auto;
-}
-
-p {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.5rem;
-}
-
 #evenement {
-  background-color: var(--couleur-arriere-accueil);
+  background-color: var(--couleur-arriere-evenement);
   color: var(--couleur-evenement);
   z-index: 1;
 }
@@ -142,42 +283,6 @@ p {
   color: var(--couleur-footer);
 }
 
-#footer a {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: lightblue;
-  text-decoration: none;
-}
-
-#footer a:visited {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: lightblue;
-  text-decoration: none;
-}
-
-@media screen and (max-width: 700px) {
-  .entete__header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .entete__header h1 {
-    font-size: 200%;
-  }
-  .p-bkg {
-    background-color: lightblue;
-    box-shadow: 2px 2px 2px black;
-    width: 25rem;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 25px auto;
-  }
-  p {
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1rem;
-  }
-}
 .entete__header {
   background-image: url("../images/wordpress-theme.png");
   background-repeat: no-repeat;
@@ -192,14 +297,9 @@ p {
     margin: 0 auto;
   }
 }
-button {
-  position: relative;
-  font-size: 1.125rem;
-  padding: 14px 23px;
-  background-image: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(12, 110, 133) 40%, rgb(0, 212, 255) 100%);
-  z-index: 2;
-}
-
+/* //////////////////////////////// */
+/* Base */
+/* //////////////////////////////// */
 /*
 https://chrisburnell.com/clamp-calculator/
 */
@@ -224,6 +324,17 @@ i {
     font-size: 1rem;
   }
 }
+button {
+  position: relative;
+  font-size: 1.125rem;
+  padding: 14px 23px;
+  background-image: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(12, 110, 133) 40%, rgb(0, 212, 255) 100%);
+  z-index: 2;
+}
+
+/* //////////////////////////////// */
+/* Effet */
+/* //////////////////////////////// */
 .vague {
   position: absolute;
   bottom: 0;
@@ -259,13 +370,10 @@ i {
   z-index: -1;
 }
 
-.formulaire {
-  background-color: aqua;
-  width: 6000px;
-  height: 200px;
-}
-
-.cours {
+/* //////////////////////////////// */
+/* Composants */
+/* //////////////////////////////// */
+.destinations {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -282,17 +390,26 @@ i {
   padding: 1rem;
 }
 
-.menu-principal-container {
-  background-color: rgba(0, 0, 0, 0.377);
+.post-categories {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
 }
 
 .menu {
-  display: none;
+  position: absolute;
+  display: flex;
+  list-style-type: none;
+  flex-direction: column;
+  transform: translateX(300%);
+  background-image: url(../images/agile.png);
 }
 @media (min-width: 700px) {
   .menu {
+    position: static;
+    flex-direction: row;
     display: flex;
-    list-style-type: none;
+    transform: translateX(0);
   }
 }
 
@@ -301,19 +418,15 @@ i {
 }
 
 .menu-item a {
-  color: red;
+  color: #fff;
 }
 
-#chk_burger:checked ~ .menu {
-  display: block;
-}
-
+/* gestion label #burger l'image svg est dans un label */
 #burger {
   display: block;
   position: absolute;
   top: 10px;
   right: 10px;
-  z-index: 1;
 }
 @media (min-width: 700px) {
   #burger {
@@ -321,8 +434,6 @@ i {
   }
 }
 
-header.menu__header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#chk_burger:checked ~ .menu {
+  transform: translateX(0);
 }/*# sourceMappingURL=style.css.map */
