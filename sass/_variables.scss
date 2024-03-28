@@ -42,6 +42,15 @@
 
 .carte {
   --_couleur-arriere: hsl(var(--u1), 100%, 85%);
+  --_couleur-arriere-carte: hsl(
+    var rgb(215, 251, 63) ;
+      radial-gradient(
+        circle,
+        rgba(215, 251, 63, 1) 0%,
+        rgba(70, 119, 252, 1) 96%
+      )
+      ;
+  );
 }
 
 #footer {

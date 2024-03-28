@@ -381,12 +381,17 @@ button {
 }
 
 .carte {
+  color: black;
+  font-family: "Kanit", sans-serif;
+  font-weight: 100;
+  font-style: normal;
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex: 1 0 225px;
   border: 1px solid #aaa;
-  background-color: var(--_couleur-arriere);
+  background: rgb(215, 251, 63);
+  background: radial-gradient(circle, rgb(215, 251, 63) 0%, rgb(70, 119, 252) 96%);
   padding: 1rem;
 }
 
@@ -396,13 +401,16 @@ button {
   gap: 1rem;
 }
 
+#chk_burger {
+  display: none;
+}
+
 .menu {
   position: absolute;
-  display: flex;
+  display: none;
   list-style-type: none;
   flex-direction: column;
   transform: translateX(300%);
-  background-image: url(../images/agile.png);
 }
 @media (min-width: 700px) {
   .menu {
@@ -419,6 +427,7 @@ button {
 
 .menu-item a {
   color: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 /* gestion label #burger l'image svg est dans un label */
@@ -435,5 +444,5 @@ button {
 }
 
 #chk_burger:checked ~ .menu {
-  transform: translateX(0);
+  display: block;
 }/*# sourceMappingURL=style.css.map */
